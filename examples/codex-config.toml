@@ -1,0 +1,8 @@
+[[mcp_servers]]
+name = "codex-memory-index"
+command = "python"
+args = ["/absolute/path/to/codex-memory-mcp/src/memory_server.py"]
+
+[mcp_servers.env]
+OPENAI_API_KEY = "your_openai_key"
+CODEX_MEMORY_DB = "/absolute/path/to/codex-memory-mcp/data/codex_memory.sqlite"

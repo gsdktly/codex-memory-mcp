@@ -1,0 +1,33 @@
+{
+  "defaults": {
+    "timeout_ms": 10000,
+    "delay_after_ms": 200
+  },
+  "tests": [
+    {
+      "name": "list tools",
+      "method": "tools/list",
+      "params": {}
+    },
+    {
+      "name": "list recent sessions (empty db)",
+      "method": "tools/call",
+      "params": {
+        "name": "list_recent_sessions",
+        "arguments": {
+          "limit": 5
+        }
+      }
+    },
+    {
+      "name": "fetch missing chunk",
+      "method": "tools/call",
+      "params": {
+        "name": "fetch_session_chunk",
+        "arguments": {
+          "chunk_id": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Add this under ~/.codex/config.toml or use `codex mcp add ...`
+
+[mcp_servers.codex_memory_index]
+command = "python"
+args = ["/absolute/path/to/codex-memory-local/src/memory_server.py"]
+
+[mcp_servers.codex_memory_index.env]
+OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
+CODEX_MEMORY_DB = "/absolute/path/to/codex-memory-local/data/codex_memory.sqlite"
+CODEX_MEMORY_EMBED_MODEL = "text-embedding-3-small"

@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-03-18T16:22:54.709684+00:00",
+  "server": "codex-memory-index",
+  "tools": [
+    {
+      "description": "Search the local Codex memory index for relevant prior session chunks.",
+      "input_schema": {
+        "properties": {
+          "limit": {
+            "default": 5,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "project_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Project Name"
+          },
+          "query": {
+            "title": "Query",
+            "type": "string"
+          },
+          "repo_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Repo Name"
+          },
+          "session_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Session Key"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_codex_sessionsArguments",
+        "type": "object"
+      },
+      "name": "search_codex_sessions"
+    },
+    {
+      "description": "Fetch the full text and metadata for a specific chunk.",
+      "input_schema": {
+        "properties": {
+          "chunk_id": {
+            "title": "Chunk Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "chunk_id"
+        ],
+        "title": "fetch_session_chunkArguments",
+        "type": "object"
+      },
+      "name": "fetch_session_chunk"
+    },
+    {
+      "description": "List recently indexed Codex sessions.",
+      "input_schema": {
+        "properties": {
+          "limit": {
+            "default": 10,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "title": "list_recent_sessionsArguments",
+        "type": "object"
+      },
+      "name": "list_recent_sessions"
+    },
+    {
+      "description": "Search semantic summaries of past Codex sessions.",
+      "input_schema": {
+        "properties": {
+          "limit": {
+            "default": 5,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "query": {
+            "title": "Query",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_session_summariesArguments",
+        "type": "object"
+      },
+      "name": "search_session_summaries"
+    }
+  ]
+}

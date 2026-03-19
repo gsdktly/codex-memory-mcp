@@ -1,0 +1,11 @@
+{
+  "$schema": "https://gofastmcp.com/public/schemas/fastmcp.json/v1.json",
+  "source": {
+    "type": "filesystem",
+    "path": "src/memory_server.py",
+    "entrypoint": "mcp"
+  },
+  "deployment": {
+    "transport": "stdio"
+  }
+}
